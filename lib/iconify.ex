@@ -1016,17 +1016,9 @@ defmodule Iconify do
 
   defp render_svg_with_css(assigns) do
     ~H"""
-    <div iconify={@icon_name} class={@class} aria-hidden="true" />
+    <span iconify={@icon_name} class={@class} aria-hidden="true" />
     """
-
-    # <div class={"#{css_class()} #{@class}"} style={"-webkit-mask: var(--#{@icon_name}); mask: var(--#{@icon_name})"} aria-hidden="true" />
   end
-
-  # defp render_svg_with_css(assigns) do
-  #   ~H"""
-  #   <div class={"#{@icon_name} #{@class}"} aria-hidden="true" />
-  #   """
-  # end
 
   @doc """
   Sets the favicon for a Phoenix LiveView socket.
